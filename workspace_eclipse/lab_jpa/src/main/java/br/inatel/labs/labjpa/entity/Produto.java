@@ -13,6 +13,15 @@ import jakarta.validation.constraints.Size;
 
 public class Produto {
 	
+	public Produto(@NotNull @Size(min = 2, max = 100) String descricao) {
+		super();
+		this.descricao = descricao;
+	}
+
+	public Produto() {
+		super();
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

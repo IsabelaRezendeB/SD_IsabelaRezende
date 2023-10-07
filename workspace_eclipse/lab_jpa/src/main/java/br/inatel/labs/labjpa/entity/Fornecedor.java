@@ -13,6 +13,15 @@ import jakarta.validation.constraints.Size;
 
 public class Fornecedor {
 	
+	public Fornecedor(@NotNull @Size(min = 2, max = 200) String razaoSocial) {
+		super();
+		this.razaoSocial = razaoSocial;
+	}
+
+	public Fornecedor() {
+		super();
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
