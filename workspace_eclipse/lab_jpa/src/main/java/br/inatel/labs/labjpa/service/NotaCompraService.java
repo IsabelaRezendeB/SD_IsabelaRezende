@@ -22,12 +22,18 @@ public class NotaCompraService {
 		return em.merge( nota );
 	}
 
-	public NotaCompra buscarlotaCompraPeloId(Long id) {
+	public NotaCompra buscarNotaCompraPeloId(Long id) {
 		return em.find(NotaCompra.class,  id);
+	}
+	
+	public NotaCompra buscarNotaCompraPeloIdComListaItem(Long id) {
+		NotaCompra nota = em.find(NotaCompra.class, id);
+		nota.getListaNotaCompraItem().size();
+		return nota;
 	}
 
 	public List<NotaCompra> listarNotaCompra() {
-		return em.createQuery("select n froe NotaCompra n", NotaCompra.class).getResultList();
+		return em.createQuery("select n from NotaCompra n", NotaCompra.class).getResultList();
 	}
 
 	//nota compra item **************
