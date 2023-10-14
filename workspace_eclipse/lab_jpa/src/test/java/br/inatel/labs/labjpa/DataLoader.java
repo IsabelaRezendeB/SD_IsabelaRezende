@@ -16,9 +16,6 @@ import br.inatel.labs.labjpa.service.FornecedorService;
 import br.inatel.labs.labjpa.service.NotaCompraService;
 import br.inatel.labs.labjpa.service.ProdutoService;
 
-
-import org.springframework.boot.test.context.SpringBootTest;
-
 @SpringBootTest
 class DataLoader {
 
